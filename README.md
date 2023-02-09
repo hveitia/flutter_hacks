@@ -1,16 +1,22 @@
-# hacks
+# Flutter Hacks
 
-A new Flutter project.
+Flutter hack for Flutter developers!!!.
 
-## Getting Started
+## Device Orientation Restriction
 
-This project is a starting point for a Flutter application.
+In order to restrict the device orientation, you can use the following code:
 
-A few resources to get you started if this is your first Flutter project:
+```dart
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.landscapeLeft,
+    DeviceOrientation.landscapeRight,
+  ]);
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  runApp(const MyApp());
+}
+```
