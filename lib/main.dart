@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:hacks/_childrens/menu/module.dart';
+import 'package:hacks/_children/menu/module.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

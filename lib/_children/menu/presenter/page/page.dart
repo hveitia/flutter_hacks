@@ -41,7 +41,7 @@ class MenuPageState extends State<MenuPage> {
       floatingActionButton: FloatingActionButton(
         // onPressed: _incrementCounter,
         onPressed: (){
-          Modular.to.navigate('/vibration-module/');
+          Modular.to.navigate('/clipboard-module/');
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),

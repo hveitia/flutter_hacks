@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:hacks/_childrens/vibration/presenter/page/page.dart';
+import 'package:hacks/_children/vibration/presenter/page/page.dart';
 
 class VibrationModule extends Module {
   @override
