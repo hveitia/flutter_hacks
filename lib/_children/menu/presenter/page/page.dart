@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -10,13 +11,6 @@ class MenuPage extends StatefulWidget {
 }
 
 class MenuPageState extends State<MenuPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,24 +19,38 @@ class MenuPageState extends State<MenuPage> {
         title: const Text('Flutter Hacks!!!'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+        child: ListView(
+          children: [
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Copy to Clipboard'),
+              trailing: const Icon(CupertinoIcons.chevron_forward),
+              onTap: () {
+                Modular.to.pushNamed('/clipboard-module/');
+              },
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Vibration'),
+              trailing: const Icon(CupertinoIcons.chevron_forward),
+              onTap: () {
+                Modular.to.pushNamed('/vibration-module/');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Shake'),
+              trailing: const Icon(CupertinoIcons.chevron_forward),
+              onTap: () {
+                Modular.to.pushNamed('/shake-module/');
+              },
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         // onPressed: _incrementCounter,
-        onPressed: (){
-          Modular.to.navigate('/clipboard-module/');
-        },
+        onPressed: (){},
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
