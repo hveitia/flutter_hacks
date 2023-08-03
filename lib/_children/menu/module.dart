@@ -1,5 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:hacks/_children/clipboard/module.dart';
+import 'package:hacks/_children/flash-light/module.dart';
 import 'package:hacks/_children/menu/presenter/page/page.dart';
 import 'package:hacks/_children/shake/module.dart';
 import 'package:hacks/_children/text-gradient/module.dart';
@@ -16,5 +17,6 @@ class MenuModule extends Module {
     ModuleRoute('/clipboard-module', module: ClipboardModule()),
     ModuleRoute('/shake-module', module: ShakeModule()),
     ModuleRoute('/text-gradient-module', module: TextGradientModule()),
+    ModuleRoute('/flash-light-module', module: FlashLightModule()),
   ];
 }

@@ -53,6 +53,14 @@ class MenuPageState extends State<MenuPage> {
                 Modular.to.pushNamed('/text-gradient-module/');
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.flashlight_on),
+              title: const Text('Flash Light'),
+              trailing: const Icon(CupertinoIcons.chevron_forward),
+              onTap: () {
+                Modular.to.pushNamed('/flash-light-module/');
+              },
+            ),
           ],
         ),
       ),
