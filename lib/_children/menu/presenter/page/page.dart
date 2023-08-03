@@ -45,6 +45,14 @@ class MenuPageState extends State<MenuPage> {
                 Modular.to.pushNamed('/shake-module/');
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.text_fields),
+              title: const Text('Text Gradient'),
+              trailing: const Icon(CupertinoIcons.chevron_forward),
+              onTap: () {
+                Modular.to.pushNamed('/text-gradient-module/');
+              },
+            ),
           ],
         ),
       ),
