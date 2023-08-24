@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
-// import 'package:torch_light/torch_light.dart';
+import 'package:torch_light/torch_light.dart';
 
 class FlashLightPage extends StatelessWidget {
   const FlashLightPage({Key? key}) : super(key: key);
+
+  void turnOnFlashLight() async {
+    final isTorchAvailable = await TorchLight.isTorchAvailable();
+    if (isTorchAvailable) {
+      TorchLight.enableTorch();
+    }
+  }
+
+  void turnOffFlashLight() async {
+    final isTorchAvailable = await TorchLight.isTorchAvailable();
+    if (isTorchAvailable) {
+      TorchLight.disableTorch();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +29,9 @@ class FlashLightPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ElevatedButton(
-              onPressed: ()  {
-                // final isTorchAvailable = await TorchLight.isTorchAvailable();
-                // if (isTorchAvailable) {
-                  // TorchLight.turnOn();
-                },
+              onPressed: () async {
+                turnOnFlashLight();
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green,
               ),
@@ -27,7 +39,9 @@ class FlashLightPage extends StatelessWidget {
             ),
             const SizedBox(height: 10,),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () async {
+                turnOffFlashLight();
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.red,
               ),
