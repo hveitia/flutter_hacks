@@ -61,6 +61,14 @@ class MenuPageState extends State<MenuPage> {
                 Modular.to.pushNamed('/flash-light-module/');
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.reorder),
+              title: const Text('Reorderable List'),
+              trailing: const Icon(CupertinoIcons.chevron_forward),
+              onTap: () {
+                Modular.to.pushNamed('/reorderable-list-module/');
+              },
+            ),
           ],
         ),
       ),

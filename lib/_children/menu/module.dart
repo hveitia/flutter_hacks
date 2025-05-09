@@ -2,6 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:hacks/_children/clipboard/module.dart';
 import 'package:hacks/_children/flash-light/module.dart';
 import 'package:hacks/_children/menu/presenter/page/page.dart';
+import 'package:hacks/_children/reorderable_list_view/module.dart';
 import 'package:hacks/_children/shake/module.dart';
 import 'package:hacks/_children/text-gradient/module.dart';
 import 'package:hacks/_children/vibration/module.dart';
@@ -18,5 +19,6 @@ class MenuModule extends Module {
     ModuleRoute('/shake-module', module: ShakeModule()),
     ModuleRoute('/text-gradient-module', module: TextGradientModule()),
     ModuleRoute('/flash-light-module', module: FlashLightModule()),
+    ModuleRoute('/reorderable-list-module', module: ReorderableListModule()),
   ];
 }
